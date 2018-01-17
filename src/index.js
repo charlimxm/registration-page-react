@@ -1,6 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { ApolloProvider } from 'react-apollo'
+
 import 'antd/dist/antd.css';
-import App from './App';
+
+import Routes from './routes'
+
+const App = () => {
+  <ApolloProvider>
+    <Routes />
+  </ApolloProvider>
+}
 
 ReactDOM.render(<App />, document.getElementById('root'));
